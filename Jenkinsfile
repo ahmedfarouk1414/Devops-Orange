@@ -1,15 +1,14 @@
 pipeline {
-
     agent {
   label 'slave'
-}
+  }
         environment {
         //be sure to replace "willbla" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "ahmedfarouk141414/orange"
     }
     
-    stages {
-        stage('Build') {
+  stages {
+      stage('Build') {
             steps {
                sh """
                    ls -al 
@@ -19,7 +18,6 @@ pipeline {
                 //sh  'mvn clean package -X -f Toy0Store/pom.xml '
               }
         }
-      }
     
      stage('Build Docker Image') {
             when {
