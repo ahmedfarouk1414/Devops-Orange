@@ -26,8 +26,7 @@ pipeline {
             steps {
                     script {
                     app = docker.build(DOCKER_IMAGE_NAME)
-             
-                }
+                   }
             }
         }  
     
