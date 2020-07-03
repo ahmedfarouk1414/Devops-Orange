@@ -24,10 +24,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                 sh """
-                 cp ${WORKSPACE}/orang2/Dockerfile  ${WORKSPACE}/orang2/Toy0Store/target/
-                	 """
-                script {
+                    script {
                     app = docker.build(DOCKER_IMAGE_NAME)
              
                 }
