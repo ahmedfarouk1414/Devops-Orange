@@ -7,8 +7,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                
-                sh  'mvn clean package'
+                sh 'ls -al '
+                sh 'pwd'
+                sh  'mvn clean package -X'
               }
         }
       }
