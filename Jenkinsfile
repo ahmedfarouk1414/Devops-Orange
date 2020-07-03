@@ -45,9 +45,9 @@ pipeline {
         }
       
        stage('DeployToProduction') {
-            when {
-                branch 'master'
-            }
+           // when {
+             //   branch 'master'
+          //  }
             steps {
                 input 'Deploy to Production?'
                 milestone(1)
