@@ -9,7 +9,7 @@ pipeline {
             steps {
                sh """
                    ls -al 
-                   'pwd
+                   pwd
                    mvn clean package -X -f Toy0Store/pom.xml 
                 """
                 //sh  'mvn clean package -X -f Toy0Store/pom.xml '
